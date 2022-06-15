@@ -24,7 +24,7 @@ $font-prefix: "/fonts/plex";
 @import "~@ibm/plex/scss/serif/index";
 
 // Set the default font family to IBM Plex Sans
-$font-family-base: "IBM Plex Serif";
+$font-family-base: "IBM Plex Serif", "Georgia", Times, serif;
 
 // Adjust font weight down.
 $font-weight-base: 400;

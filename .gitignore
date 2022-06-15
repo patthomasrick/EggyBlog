@@ -36,3 +36,6 @@ jspm_packages
 # Optional REPL history
 .node_repl_history
 .next
+
+# Plex licenses
+public/fonts/plex/**/license.txt
