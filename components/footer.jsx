@@ -1,5 +1,23 @@
-import { Button, Container } from "react-bootstrap";
+import Image from "next/image";
+import { Container } from "react-bootstrap";
+import animals from "./animals";
 
-export default function Layout({ children }) {
-  return <Container>{children}</Container>;
+// Pick a random animal.
+const Animal = animals[Math.floor(Math.random() * animals.length)];
+
+export default function Footer() {
+  return (
+    <Container className="mt-5 pt-5 text-center">
+      <div
+        className="text-center mx-auto"
+        style={{
+          position: "relative",
+          height: "256px",
+          width: "80%",
+        }}
+      >
+        {Animal}
+      </div>
+    </Container>
+  );
 }

@@ -1,4 +1,3 @@
-import { Button, Container } from "react-bootstrap";
 import Head from "next/head";
 
 export default function Header({ title }) {

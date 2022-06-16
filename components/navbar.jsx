@@ -7,7 +7,7 @@ export default function LayoutNavbar() {
       <Navbar className="navbar-expand-lg bg-light ps-5">
         <div className="container-fluid">
           <Navbar.Brand href="#">
-            <Image src="/favicon.svg" width={32} height={32}></Image>
+            <Image src="/images/p.gif" width={50} height={50}></Image>
           </Navbar.Brand>
         </div>
       </Navbar>
