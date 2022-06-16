@@ -1,11 +1,11 @@
 import { Container } from "react-bootstrap";
 import Image from "next/image";
-import { BIO, SOCIALS } from "./config";
+import { AUTHOR, BIO, SOCIALS } from "./config";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Column() {
   return (
-    <Container className="pt-5 text-center">
+    <Container className="pt-5 text-center text-light sticky-lg-top">
       <div>
         <Image
           src="/me.jpg"
@@ -16,7 +16,7 @@ export default function Column() {
         ></Image>
       </div>
 
-      <h3>Patrick Thomas</h3>
+      <h3>{AUTHOR}</h3>
 
       <p>
         {/* Socials */}

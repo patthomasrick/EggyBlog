@@ -11,7 +11,7 @@ export default function Layout({ title, subtitle, children }) {
 
       <div className="row g-0">
         {/* Left column */}
-        <div className="col-lg-4 col-xl-3 bg-dark text-white px-3 order-last order-lg-first">
+        <div className="col-lg-4 col-xl-3 bg-primary text-light px-3 order-last order-lg-first">
           <Column />
         </div>
 

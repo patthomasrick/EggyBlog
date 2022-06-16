@@ -29,5 +29,8 @@ export const SOCIALS = [
   },
 ];
 
+// Author.
+export const AUTHOR = "Patrick Thomas";
+
 // Bio.
 export const BIO = "I'm a software engineer.";
