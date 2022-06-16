@@ -27,6 +27,8 @@ export default function Column() {
             className="mx-2"
             target="_blank"
             rel="noopener noreferrer"
+            data-bs-toggle="tooltip"
+            title={social.name}
           >
             <FontAwesomeIcon
               icon={social.icon}

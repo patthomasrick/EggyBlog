@@ -20,16 +20,16 @@ export default function Layout({ title, subtitle, children }) {
           {/* Navbar */}
           <LayoutNavbar />
 
-          {/* Title block */}
-          <Container className="my-5 ps-5 ">
-            <h1 className="title">{title ? title : "Eggy Blog"}</h1>
-            <h2 className="subtitle">
-              {subtitle ? subtitle : "A blog about eggy"}
-            </h2>
-          </Container>
+          <div className="container" style={{ maxWidth: "48em" }}>
+            {/* Title block */}
+            <Container className="my-5 ps-5 ">
+              <h1 className="title">{title ? title : "Eggy Blog"}</h1>
+              <h2 className="subtitle">{subtitle ? subtitle : ""}</h2>
+            </Container>
 
-          {/* Main */}
-          <Container className="content ps-5">{children}</Container>
+            {/* Main */}
+            <Container className="content ps-5">{children}</Container>
+          </div>
 
           {/* Footer */}
           <Footer />

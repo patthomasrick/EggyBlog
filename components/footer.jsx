@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Container } from "react-bootstrap";
 import animals from "./animals";
 
@@ -7,7 +6,7 @@ const Animal = animals[Math.floor(Math.random() * animals.length)];
 
 export default function Footer() {
   return (
-    <Container className="mt-5 pt-5 text-center">
+    <Container className="my-5 pt-5 text-center">
       <div
         className="text-center mx-auto"
         style={{

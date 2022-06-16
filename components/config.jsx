@@ -3,22 +3,29 @@ import {
   faGitlab,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 // Title of the whole app.
-export const NAME = "Eggy Blog";
+export const NAME = "Hi, I'm Patrick";
 
 // Subtitle.
-export const SUBTITLE = "A blog about eggy";
+export const SUBTITLE = "";
+
+// Author.
+export const AUTHOR = "Patrick Thomas";
+
+// Bio.
+export const BIO = "I'm a software engineer.";
 
 // Socials.
 export const SOCIALS = [
   {
-    name: "Github",
+    name: "GitHub",
     url: "https://github.com/patthomasrick",
     icon: faGithub,
   },
   {
-    name: "Gitlab",
+    name: "GitLab",
     url: "https://gitlab.com/patthomasrick",
     icon: faGitlab,
   },
@@ -27,10 +34,9 @@ export const SOCIALS = [
     url: "https://www.linkedin.com/in/patrick-w-thomas/",
     icon: faLinkedin,
   },
+  {
+    name: "Email",
+    url: "mailto:patrick@patrickwthomas.net",
+    icon: faEnvelope,
+  },
 ];
-
-// Author.
-export const AUTHOR = "Patrick Thomas";
-
-// Bio.
-export const BIO = "I'm a software engineer.";
