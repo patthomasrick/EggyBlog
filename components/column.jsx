@@ -1,16 +1,17 @@
-import { Container } from "react-bootstrap";
-import Image from "next/image";
-import { AUTHOR, BIO, SOCIALS } from "./config";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Image from "next/image";
+import Link from "next/link";
+import { Container } from "react-bootstrap";
+import { AUTHOR, BIO, SOCIALS } from "./config";
 
-export default function Column() {
+export default function Column({ posts }) {
   return (
     <Container className="pt-5 text-center text-light sticky-lg-top">
       <div>
         <Image
           src="/me.jpg"
-          width={96}
-          height={96}
+          width={128}
+          height={128}
           alt="Me"
           style={{ borderRadius: "50%" }}
         ></Image>
@@ -40,6 +41,18 @@ export default function Column() {
       </p>
 
       <p>{BIO}</p>
+
+      <hr className="m-5" />
+
+      <h4>Recent Posts</h4>
+
+      {(posts ?? []).map((post) => (
+        <p key={post.id}>
+          <Link href={`/posts/${post.id}`}>
+            <a className="text-light">{post.title}</a>
+          </Link>
+        </p>
+      ))}
     </Container>
   );
 }

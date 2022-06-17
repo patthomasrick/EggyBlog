@@ -1,18 +1,25 @@
 import { Container } from "react-bootstrap";
+import Breadcrumbs from "./breadcrumbs";
 import Column from "./column";
 import Footer from "./footer";
 import Header from "./header";
 import LayoutNavbar from "./navbar";
 
-export default function Layout({ title, subtitle, children }) {
+export default function Layout({
+  title = "Untitled",
+  subtitle = "",
+  crumbs = [],
+  layoutData,
+  children,
+}) {
   return (
     <>
       <Header title={title} />
 
-      <div className="row g-0">
+      <div className="row w-100">
         {/* Left column */}
         <div className="col-lg-4 col-xl-3 bg-primary text-light px-3 order-last order-lg-first">
-          <Column />
+          <Column posts={layoutData.column} />
         </div>
 
         {/* Main content */}
@@ -21,14 +28,19 @@ export default function Layout({ title, subtitle, children }) {
           <LayoutNavbar />
 
           <div className="container" style={{ maxWidth: "48em" }}>
+            {/* Breadcrumbs */}
+            <Container>
+              <Breadcrumbs crumbs={crumbs} />
+            </Container>
+
             {/* Title block */}
-            <Container className="my-5 ps-5 ">
-              <h1 className="title">{title ? title : "Eggy Blog"}</h1>
-              <h2 className="subtitle">{subtitle ? subtitle : ""}</h2>
+            <Container className="">
+              <h1 className="title">{title}</h1>
+              <h2 className="subtitle">{subtitle}</h2>
             </Container>
 
             {/* Main */}
-            <Container className="content ps-5">{children}</Container>
+            <Container className="content text-justify">{children}</Container>
           </div>
 
           {/* Footer */}

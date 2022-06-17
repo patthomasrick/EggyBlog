@@ -1,23 +1,23 @@
 import { NAME, SUBTITLE } from "../components/config";
 import Layout from "../components/layout";
-import { getPageData, getSortedPostsData } from "../utils/posts";
+import { getLayoutPostData, getPageData } from "../utils/posts";
 
 export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
+  const layoutData = getLayoutPostData();
   const homePageData = await getPageData("home");
 
   return {
     props: {
-      allPostsData,
-      homePageData,
+      layoutData: layoutData,
+      homePageData: homePageData,
     },
   };
 }
 
-export default function HomePage({ allPostsData, homePageData }) {
+export default function HomePage({ layoutData, homePageData }) {
   return (
     <>
-      <Layout title={NAME} subtitle={SUBTITLE}>
+      <Layout title={NAME} subtitle={SUBTITLE} layoutData={layoutData}>
         <section>
           <div
             dangerouslySetInnerHTML={{ __html: homePageData.content_html }}

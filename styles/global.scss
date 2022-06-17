@@ -41,7 +41,10 @@ $font-prefix: "/fonts/plex";
 @import "~@ibm/plex/scss/serif/index";
 
 // Set the default font family to IBM Plex Sans
-$font-family-base: "IBM Plex Serif", "Georgia", Times, serif;
+$font-family-base: "IBM Plex Serif", "Georgia", Times, serif,
+  // Emoji fonts
+  "Apple Color Emoji",
+  "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 
 // Adjust font weight down.
 $font-weight-base: 400;
@@ -56,4 +59,10 @@ h4,
 h5,
 h6 {
   font-weight: $font-weight-base;
+}
+
+.content p,
+.content ul,
+.content ol {
+  margin-bottom: 2.5rem;
 }
