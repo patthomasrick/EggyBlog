@@ -1,6 +1,7 @@
 ---
 title: "Under new management"
-date: "2020-01-01"
+date: "2022-07-02"
+time: "21:44"
 tags:
   - "project"
 ---
