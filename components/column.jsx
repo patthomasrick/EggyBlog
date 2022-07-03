@@ -6,7 +6,7 @@ import { AUTHOR, BIO, SOCIALS } from "./config";
 
 export default function Column({ posts }) {
   return (
-    <Container className="pt-5 text-center text-light sticky-lg-top">
+    <Container className="py-5 text-center text-light sticky-lg-top">
       <div>
         <Image
           src="/me.jpg"
