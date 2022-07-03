@@ -1,10 +1,16 @@
+import { useRouter } from "next/router";
 import { Container } from "react-bootstrap";
 import animals from "./animals";
 
-// Pick a random animal.
-const Animal = animals[Math.floor(Math.random() * animals.length)];
-
 export default function Footer() {
+  // Pick a random animal based on the current route.
+  const router = useRouter();
+  // Need to hash router.query.id to get a number between 0 and length of animals. Our hash is just the sum of the characters in the id.
+  const hash = (router.query.id ?? "")
+    .split("")
+    .reduce((acc, cur) => acc + cur.charCodeAt(0), 0);
+  const Animal = animals[hash % animals.length];
+
   return (
     <Container className="my-5 pt-5 text-center">
       <div
