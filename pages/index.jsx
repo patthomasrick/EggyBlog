@@ -1,6 +1,6 @@
 import { NAME, SUBTITLE } from "../components/config";
 import Layout from "../components/layout";
-import PostCardLarge from "../components/posts/post_card_large";
+import PostCard from "../components/posts/post_card";
 import { getLayoutPostData, getPageData } from "../utils/posts";
 
 export async function getStaticProps() {
@@ -32,8 +32,13 @@ export default function HomePage({ layoutData, homePageData, recentPosts }) {
 
           <div className="row">
             {recentPosts.slice(0, 2).map((post) => (
-              <div className="col-lg-6 col-12">
-                <PostCardLarge key={post.id} post={post} />
+              <div className="col-md-6 col-12">
+                <PostCard size="large" key={post.id} post={post} />
+              </div>
+            ))}
+            {recentPosts.slice(2, 5).map((post) => (
+              <div className="col-md-4 col-6">
+                <PostCard size="small" key={post.id} post={post} />
               </div>
             ))}
           </div>
