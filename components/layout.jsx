@@ -16,7 +16,7 @@ export default function Layout({
     <>
       <Header title={title} />
 
-      <div className="row w-100">
+      <div className="row w-100 mx-0">
         {/* Left column */}
         <div className="col-lg-4 col-xl-3 bg-primary text-light px-3 order-last order-lg-first">
           <Column posts={layoutData.column} />
@@ -34,9 +34,9 @@ export default function Layout({
             </Container>
 
             {/* Title block */}
-            <Container className="">
+            <Container className="pb-3 border-bottom border-dark mb-4">
               <h1 className="title">{title}</h1>
-              <h2 className="subtitle">{subtitle}</h2>
+              <h2 className="subtitle h6 text-muted">{subtitle}</h2>
             </Container>
 
             {/* Main */}

@@ -12,7 +12,7 @@ export default function Footer() {
   const Animal = animals[hash % animals.length];
 
   return (
-    <Container className="my-5 pt-5 text-center">
+    <Container className="my-5 py-5 text-center">
       <div
         className="text-center mx-auto"
         style={{
