@@ -34,9 +34,9 @@ export default function Layout({
             </Container>
 
             {/* Title block */}
-            <Container className="">
+            <Container className="pb-3 border-bottom border-dark mb-4">
               <h1 className="title">{title}</h1>
-              <h2 className="subtitle">{subtitle}</h2>
+              <h2 className="subtitle h6 text-muted">{subtitle}</h2>
             </Container>
 
             {/* Main */}

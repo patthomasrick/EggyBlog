@@ -8,13 +8,17 @@ export default function Column({ posts }) {
   return (
     <Container className="py-5 text-center text-light sticky-lg-top">
       <div>
-        <Image
-          src="/me.jpg"
-          width={128}
-          height={128}
-          alt="Me"
-          style={{ borderRadius: "50%" }}
-        ></Image>
+        <Link href="/">
+          <a>
+            <Image
+              src="/me.jpg"
+              width={128}
+              height={128}
+              alt="Me"
+              style={{ borderRadius: "50%" }}
+            ></Image>
+          </a>
+        </Link>
       </div>
 
       <h3>{AUTHOR}</h3>
@@ -53,6 +57,12 @@ export default function Column({ posts }) {
           </Link>
         </p>
       ))}
+
+      <p>
+        <Link href={`/posts/pages/1`}>
+          <a className="text-muted">View all posts</a>
+        </Link>
+      </p>
     </Container>
   );
 }
