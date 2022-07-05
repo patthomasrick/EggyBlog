@@ -19,7 +19,7 @@ export async function getStaticProps({ params }) {
   const postData = await getPostData(params.id);
   const crumbs = [
     { label: "Home", url: "/" },
-    { label: "Posts", url: "/posts" },
+    { label: "Posts", url: "/posts/pages/1" },
     { label: postData.title, url: `/posts/${params.id}`, active: true },
   ];
   return {
@@ -39,10 +39,9 @@ export default function Post({ postData, crumbs, layoutData }) {
       crumbs={crumbs}
       layoutData={layoutData}
     >
-      <div>
+      <p>
         <Date dateString={postData.date} />
-        <hr className="mx-5" />
-      </div>
+      </p>
       <div dangerouslySetInnerHTML={{ __html: postData.content_html }} />
     </Layout>
   );

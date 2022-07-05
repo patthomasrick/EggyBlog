@@ -156,5 +156,6 @@ export function getSortedPostsData(start = 0, end = 10) {
 }
 
 export function getLayoutPostData() {
-  return { column: getSortedPostsData(0, 5) };
+  const totalPosts = getAllPostIds().length;
+  return { column: getSortedPostsData(0, 5), totalPosts: totalPosts };
 }

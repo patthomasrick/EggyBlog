@@ -9,7 +9,7 @@ export default function PostCard({ post, size }) {
         <div
           className="ratio ratio-4x3 card-img-top"
           style={{
-            backgroundImage: `url(${post.image})`,
+            backgroundImage: `url(/${post.image})`,
             backgroundSize: "cover",
           }}
         ></div>
