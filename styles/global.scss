@@ -66,3 +66,16 @@ h6 {
 .content ol {
   margin-bottom: 2.5rem;
 }
+
+.content img {
+  display: block;
+
+  max-width: 80%;
+  margin: 0 auto;
+
+  // Add a margin-bottom of 1.5rem to images.
+  margin-bottom: 1.5rem;
+
+  // Add soft drop shadow to images.
+  box-shadow: 1em 1em 3rem 0 rgb(0 0 0 / 20%);
+}
