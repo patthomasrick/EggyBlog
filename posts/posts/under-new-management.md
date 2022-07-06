@@ -4,7 +4,7 @@ date: "2022-07-02"
 time: "21:44"
 tags:
   - "project"
-image: images/posts/grave.gif
+image: /images/posts/grave.gif
 ---
 
 **TLDR: Old server died for unknown reasons.** If you are still interested in my personal projects, you can find them on my GitHub. Check the sidebar/footer for links.
