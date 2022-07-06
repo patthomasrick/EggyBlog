@@ -32,13 +32,13 @@ export default function HomePage({ layoutData, homePageData, recentPosts }) {
 
           <div className="row">
             {recentPosts.slice(0, 2).map((post) => (
-              <div className="col-md-6 col-12">
-                <PostCard size="large" key={post.id} post={post} />
+              <div className="col-md-6 col-12" key={post.id}>
+                <PostCard size="large" post={post} />
               </div>
             ))}
             {recentPosts.slice(2, 5).map((post) => (
-              <div className="col-md-4 col-6">
-                <PostCard size="small" key={post.id} post={post} />
+              <div className="col-md-4 col-6" key={post.id}>
+                <PostCard size="small" post={post} />
               </div>
             ))}
           </div>
