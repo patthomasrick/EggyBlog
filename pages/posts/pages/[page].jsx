@@ -56,8 +56,8 @@ export default function Page({ crumbs, layoutData, page, numPages, posts }) {
     >
       <div className="row">
         {posts.map((post) => (
-          <div className="col-md-6 col-12">
-            <PostCard size="large" key={post.id} post={post} />
+          <div className="col-md-6 col-12" key={post.id}>
+            <PostCard size="large" post={post} />
           </div>
         ))}
       </div>
