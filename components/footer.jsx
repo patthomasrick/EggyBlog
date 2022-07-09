@@ -23,6 +23,11 @@ export default function Footer() {
       >
         {Animal}
       </div>
+      <br />
+      <p>
+        Patrick Thomas, {new Date().getFullYear()}. Clip art images from{" "}
+        <a href="https://etc.usf.edu/clipart/">ClipArt ETC</a>.
+      </p>
     </Container>
   );
 }

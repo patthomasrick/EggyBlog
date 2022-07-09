@@ -15,7 +15,7 @@ export default function PostCard({ post, size }) {
         ></div>
       )}
       <div className="card-body">
-        <h3 className={`card-title ${size == "large" ? "h5" : "h6"}`}>
+        <h3 className={`card-title py-0 ${size == "large" ? "h5" : "h6"}`}>
           <Link href={`/posts/${post.id}`}>
             <a className="text-light stretched-link">{post.title}</a>
           </Link>

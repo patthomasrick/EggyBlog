@@ -1,8 +1,11 @@
 import fs from "fs";
 import matter from "gray-matter";
 import path from "path";
-import { remark } from "remark";
-import html from "remark-html";
+import { unified } from "unified";
+import remarkParse from "remark-parse";
+import remarkRehype from "remark-rehype";
+import rehypeRaw from "rehype-raw";
+import rehypeStringify from "rehype-stringify";
 
 const posts_directory = path.join(process.cwd(), "posts", "posts");
 const pages_directory = path.join(process.cwd(), "posts", "pages");
@@ -91,8 +94,11 @@ async function getMarkdownData(directory, id) {
   const matter_result = matter(file_contents);
 
   // Use remark to convert markdown into HTML string
-  const processed_content = await remark()
-    .use(html)
+  const processed_content = await unified()
+    .use(remarkParse)
+    .use(remarkRehype, { allowDangerousHtml: true })
+    .use(rehypeRaw) // *Parse* the raw HTML strings embedded in the tree
+    .use(rehypeStringify)
     .process(matter_result.content);
   const content_html = processed_content.toString();
 
