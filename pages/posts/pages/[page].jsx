@@ -30,7 +30,7 @@ export async function getStaticProps({ params }) {
   const crumbs = [
     { label: "Home", url: "/" },
     { label: "Posts", url: "/posts" },
-    { label: `Page ${params.page}`, url: `/posts/page/${params.page}` },
+    { label: `Page ${params.page}`, url: `/posts/pages/${params.page}` },
   ];
   const page = Number(params.page);
   const numPages = Math.ceil(layoutData.totalPosts / 10);
