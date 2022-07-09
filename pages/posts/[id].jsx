@@ -1,4 +1,4 @@
-import Date from "../../components/date";
+import { format, parseISO } from "date-fns";
 import Layout from "../../components/layout";
 import {
   getAllPostIds,
@@ -35,13 +35,10 @@ export default function Post({ postData, crumbs, layoutData }) {
   return (
     <Layout
       title={postData.title}
-      subtitle=""
+      subtitle={format(parseISO(postData.date), "d MMM yyyy")}
       crumbs={crumbs}
       layoutData={layoutData}
     >
-      <p>
-        <Date dateString={postData.date} />
-      </p>
       <div dangerouslySetInnerHTML={{ __html: postData.content_html }} />
     </Layout>
   );

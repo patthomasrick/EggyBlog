@@ -32,25 +32,54 @@ $secondary: $elton-blue;
 // $warning: $yellow;
 // $danger: $red;
 // $light: $gray-100;
-// $dark: $gray-900;
-$body-bg: $cameo-pink;
+$dark: $xiketic;
+// $body-bg: $cameo-pink;
+$body-color: $xiketic;
+
+// ##########################################
+// Fonts
+// ##########################################
 
 $font-prefix: "/fonts/plex";
 @import "~@ibm/plex/scss/mono/index";
 @import "~@ibm/plex/scss/sans/index";
 @import "~@ibm/plex/scss/serif/index";
 
-// Set the default font family to IBM Plex Sans
-$font-family-base: "IBM Plex Serif", "Georgia", Times, serif,
+$font-family-sans-serif: "IBM Plex Sans", system-ui, sans-serif,
   // Emoji fonts
   "Apple Color Emoji",
   "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 
+$font-family-serif: 
+  // Custom
+  "IBM Plex Serif",
+  // Widely-available serif fonts
+  "Georgia",
+  Times, serif, "Apple Color Emoji",
+  // Emoji fonts
+  "Segoe UI Emoji",
+  "Segoe UI Symbol", "Noto Color Emoji" !default;
+
+// Set the default font family to IBM Plex Sans
+$font-family-base: $font-family-sans-serif;
+
 // Adjust font weight down.
 $font-weight-base: 400;
 
+$line-height-base: 1.5;
+
+$font-size-root: 18px;
+
 /* import bootstrap to set changes */
 @import "~bootstrap/scss/bootstrap";
+
+// ##########################################
+// Theme modifications
+// ##########################################
+
+// ##########################################
+// Headings
+// ##########################################
 
 h1,
 h2,
@@ -58,15 +87,58 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: $font-family-serif;
   font-weight: $font-weight-base;
+
+  // Larger padding
+  padding-bottom: 1.5rem;
 }
 
+// H1 headings get a short think underbar.
+h1 {
+  position: relative;
+}
+h1:after {
+  content: "";
+  position: absolute;
+  width: 8rem;
+  height: 5px;
+  bottom: 0.5rem;
+  left: 0;
+  border-bottom: 5px solid $xiketic;
+}
+
+// Heading underlines: thick
+h1 > u {
+  text-decoration-thickness: 0.15em;
+}
+
+// Subtitles: some top margin, sans serif
+.subtitle {
+  font-family: $font-family-sans-serif;
+  font-weight: $font-weight-base;
+  margin-top: 1rem;
+}
+
+.layout-header {
+  // Thick vertical padding and margin.
+  padding-top: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+// ##########################################
+// Content and paragraphs
+// ##########################################
+
+// Large spaces after content paragraphs.
 .content p,
 .content ul,
 .content ol {
   margin-bottom: 2.5rem;
 }
 
+// Full size images with soft drop shadow.
 .content img {
   display: block;
 
@@ -78,4 +150,8 @@ h6 {
 
   // Add soft drop shadow to images.
   box-shadow: 1em 1em 3rem 0 rgb(0 0 0 / 20%);
+}
+
+.no-shadow {
+  box-shadow: none !important;
 }

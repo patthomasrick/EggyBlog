@@ -34,10 +34,10 @@ export default function Layout({
             </Container>
 
             {/* Title block */}
-            <Container className="pb-3 border-bottom border-dark mb-4">
+            <div className="container layout-header">
               <h1 className="title">{title}</h1>
-              <h2 className="subtitle h6 text-muted">{subtitle}</h2>
-            </Container>
+              <h2 className="subtitle h6">{subtitle}</h2>
+            </div>
 
             {/* Main */}
             <Container className="content text-justify">{children}</Container>
