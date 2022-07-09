@@ -12,7 +12,7 @@ export default function Footer() {
   const Animal = animals[hash % animals.length];
 
   return (
-    <Container className="my-5 py-5 text-center">
+    <Container className="my-5 py-5 text-center" style={{ maxWidth: "48em" }}>
       <div
         className="text-center mx-auto"
         style={{
@@ -26,7 +26,11 @@ export default function Footer() {
       <br />
       <p>
         Patrick Thomas, {new Date().getFullYear()}. Clip art images from{" "}
-        <a href="https://etc.usf.edu/clipart/">ClipArt ETC</a>.
+        <a href="https://etc.usf.edu/clipart/">ClipArt ETC</a>. Fonts from{" "}
+        <a href="https://www.ibm.com/plex/">IBM Plex</a>. Built with{" "}
+        <a href="https://nextjs.org/">Next.js</a>. Powered by{" "}
+        <a href="https://vercel.com/">Vercel</a>. See the source code{" "}
+        <a href="https://github.com/patthomasrick/EggyBlog">here</a>.
       </p>
     </Container>
   );

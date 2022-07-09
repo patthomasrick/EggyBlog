@@ -51,7 +51,7 @@ export default function Column({ posts }) {
       <h4>Recent Posts</h4>
 
       {(posts ?? []).map((post) => (
-        <p key={post.id}>
+        <p key={post.id} className="mb-1">
           <Link href={`/posts/${post.id}`}>
             <a className="text-light">{post.title}</a>
           </Link>

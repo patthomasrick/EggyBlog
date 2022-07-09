@@ -3,7 +3,7 @@ import Date from "../date";
 
 export default function PostCard({ post, size }) {
   return (
-    <div className="card bg-primary text-light mb-2">
+    <div className="card bg-primary text-light mb-3">
       {/* If there is an image, show card image */}
       {post.image && (
         <div
@@ -14,7 +14,16 @@ export default function PostCard({ post, size }) {
           }}
         ></div>
       )}
-      <div className="card-body">
+      <div className="card-body pb-1">
+        <div>
+          {/* Tag for tag in post */}
+          {post.tags.map((tag) => (
+            <span className="badge text-light p-0" key={tag}>
+              #{tag}
+            </span>
+          ))}
+        </div>
+
         <h3 className={`card-title py-0 ${size == "large" ? "h5" : "h6"}`}>
           <Link href={`/posts/${post.id}`}>
             <a className="text-light stretched-link">{post.title}</a>
@@ -24,14 +33,6 @@ export default function PostCard({ post, size }) {
         {post.excerpt && <p className="card-text">{post.excerpt}</p>}
       </div>
       <div className="card-footer">
-        <div>
-          {/* Tag for tag in post */}
-          {post.tags.map((tag) => (
-            <span className="badge bg-secondary text-dark" key={tag}>
-              {tag}
-            </span>
-          ))}
-        </div>
         <div>
           <small className="text-muted">
             <Date dateString={post.date} />
