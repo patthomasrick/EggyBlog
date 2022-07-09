@@ -14,12 +14,12 @@ export default function PostCard({ post, size }) {
           }}
         ></div>
       )}
-      <div className="card-body pb-1">
+      <div className="card-body">
         <div>
           {/* Tag for tag in post */}
           {post.tags.map((tag) => (
             <span className="badge text-light p-0" key={tag}>
-              #{tag}
+              #{tag}&nbsp;&nbsp;
             </span>
           ))}
         </div>
@@ -31,13 +31,10 @@ export default function PostCard({ post, size }) {
         </h3>
 
         {post.excerpt && <p className="card-text">{post.excerpt}</p>}
-      </div>
-      <div className="card-footer">
-        <div>
-          <small className="text-muted">
-            <Date dateString={post.date} />
-          </small>
-        </div>
+
+        <small className="text-muted">
+          <Date dateString={post.date} />
+        </small>
       </div>
     </div>
   );
