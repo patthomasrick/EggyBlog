@@ -35,6 +35,7 @@ export default function Post({ postData, crumbs, layoutData }) {
   return (
     <Layout
       title={postData.title}
+      description={postData.excerpt}
       subtitle={format(parseISO(postData.date), "d MMM yyyy")}
       crumbs={crumbs}
       layoutData={layoutData}

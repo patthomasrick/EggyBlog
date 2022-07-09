@@ -7,6 +7,7 @@ import LayoutNavbar from "./navbar";
 
 export default function Layout({
   title = "Untitled",
+  description = "",
   subtitle = "",
   crumbs = [],
   layoutData,
@@ -14,7 +15,7 @@ export default function Layout({
 }) {
   return (
     <>
-      <Header title={title} />
+      <Header title={title} description={description} />
 
       <div className="row w-100 mx-0">
         {/* Left column */}

@@ -1,0 +1,7 @@
+# Disallow access to /posts/pages/*
+User-agent: *
+Disallow: /posts/pages/*
+
+# Allow all crawlers
+User-agent: *
+Allow: /
