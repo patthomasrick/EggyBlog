@@ -7,6 +7,7 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 // Title of the whole app.
 export const NAME = "Hi, I'm Patrick";
+export const SHORT_NAME = "Patrick";
 
 // Subtitle.
 export const SUBTITLE = "";
