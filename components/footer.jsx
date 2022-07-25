@@ -26,9 +26,10 @@ export default function Footer() {
       <br />
       <p>
         Patrick Thomas, {new Date().getFullYear()}. Clip art images from{" "}
-        <a href="https://etc.usf.edu/clipart/">ClipArt ETC</a>. Fonts from{" "}
-        <a href="https://www.ibm.com/plex/">IBM Plex</a>. Built with{" "}
-        <a href="https://nextjs.org/">Next.js</a>. Powered by{" "}
+        <a href="https://etc.usf.edu/clipart/">ClipArt ETC</a>. Fonts are{" "}
+        <a href="https://www.ibm.com/plex/">IBM Plex</a> and{" "}
+        <a href="https://fonts.google.com/specimen/EB+Garamond">EB Garamond</a>.
+        Built with <a href="https://nextjs.org/">Next.js</a>. Powered by{" "}
         <a href="https://vercel.com/">Vercel</a>. See the source code{" "}
         <a href="https://github.com/patthomasrick/EggyBlog">here</a>.
       </p>

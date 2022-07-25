@@ -45,6 +45,9 @@ $font-prefix: "/fonts/plex";
 @import "~@ibm/plex/scss/sans/index";
 @import "~@ibm/plex/scss/serif/index";
 
+// Load garamond.
+@import "./fonts/garamond.scss";
+
 $font-family-sans-serif: "IBM Plex Sans", system-ui, sans-serif,
   // Emoji fonts
   "Apple Color Emoji",
@@ -52,7 +55,7 @@ $font-family-sans-serif: "IBM Plex Sans", system-ui, sans-serif,
 
 $font-family-serif: 
   // Custom
-  "IBM Plex Serif",
+  "EB Garamond", "IBM Plex Serif",
   // Widely-available serif fonts
   "Georgia",
   Times, serif, "Apple Color Emoji",
