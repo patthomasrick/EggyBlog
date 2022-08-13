@@ -3,8 +3,9 @@
 ## Using pre-compiled ttf fonts
 
 Pre-compiled binaries are supplied in the `fonts` folder.
- 
+
 The pre-compiled ttf fonts contain several enhancements that are not included when compiling source files yourself:
+
 - Variable TrueType hint instructions for better rendering on Windows;
 - Alternate forms for glyphs `naira`, `won` and `fraction` that are automatically shown when using particular widths;
 - A `stat` table containing names of all instances that is used to show these instances in font menus;
