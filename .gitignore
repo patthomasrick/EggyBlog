@@ -42,3 +42,6 @@ public/fonts/plex/**/license.txt
 
 # Output
 out
+
+# Environment
+.env.local
