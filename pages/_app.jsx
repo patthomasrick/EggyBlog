@@ -24,5 +24,12 @@ export default function App({ Component, pageProps }) {
     }, []);
   }
 
+  // Add effect to scroll to top of page on route change.
+  useEffect(() => {
+    router.events.on("routeChangeComplete", (url, { shallow }) => {
+      window.scrollTo(0, 0);
+    });
+  }, []);
+
   return <Component {...pageProps} />;
 }
