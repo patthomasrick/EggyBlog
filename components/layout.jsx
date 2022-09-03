@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+import { useRouter } from "next/router";
 import { Container } from "react-bootstrap";
 import Breadcrumbs from "./breadcrumbs";
 import Column from "./column";
@@ -13,9 +15,11 @@ export default function Layout({
   layoutData,
   children,
 }) {
+  const router = useRouter();
+
   return (
     <>
-      <Header title={title} description={description} />
+      <Header title={title} description={description} shortNameHidden={true} />
 
       <div className="row w-100 mx-0">
         {/* Left column */}
@@ -34,14 +38,31 @@ export default function Layout({
               <Breadcrumbs crumbs={crumbs} />
             </Container>
 
-            {/* Title block */}
-            <div className="container layout-header">
-              <h1 className="title">{title}</h1>
-              <h2 className="subtitle h6">{subtitle}</h2>
-            </div>
+            <motion.div
+              key={router.route}
+              initial="contentInitial"
+              animate="contentAnimate"
+              transition={{ duration: 0.5 }}
+              variants={{
+                contentInitial: { opacity: 0 },
+                contentAnimate: { opacity: 1 },
+              }}
+            >
+              {/* Title block */}
+              <div className="container layout-header">
+                <h1 id="title" className="title">
+                  {title}
+                </h1>
+                <h2 id="subtitle" className="subtitle h6">
+                  {subtitle}
+                </h2>
+              </div>
 
-            {/* Main */}
-            <Container className="content text-justify">{children}</Container>
+              {/* Main */}
+              <Container id="content" className="content text-justify">
+                {children}
+              </Container>
+            </motion.div>
           </div>
 
           {/* Footer */}

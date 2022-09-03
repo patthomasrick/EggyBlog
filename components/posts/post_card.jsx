@@ -1,9 +1,17 @@
+import { motion } from "framer-motion";
 import Link from "next/link";
 import Date from "../date";
 
 export default function PostCard({ post, size }) {
   return (
-    <div className="card bg-primary text-light mb-3">
+    <motion.div
+      className="card bg-primary text-light mb-3"
+      whileHover={{
+        scale: 1.05,
+        transition: { duration: 0.2 },
+        zIndex: 1,
+      }}
+    >
       {/* If there is an image, show card image */}
       {post.image && (
         <div
@@ -36,6 +44,6 @@ export default function PostCard({ post, size }) {
           <Date dateString={post.date} />
         </small>
       </div>
-    </div>
+    </motion.div>
   );
 }
