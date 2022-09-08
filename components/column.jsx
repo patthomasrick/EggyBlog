@@ -3,11 +3,19 @@ import Image from "next/image";
 import Link from "next/link";
 import { Container } from "react-bootstrap";
 import { AUTHOR, BIO, SOCIALS } from "./config";
+import { motion } from "framer-motion";
 
 export default function Column({ posts }) {
   return (
     <Container className="py-5 text-center text-light sticky-lg-top">
-      <div>
+      <motion.div
+        className="card bg-primary text-light mb-3"
+        whileHover={{
+          scale: 1.1,
+          transition: { duration: 0.2 },
+          zIndex: 1,
+        }}
+      >
         <Link href="/">
           <a>
             <Image
@@ -19,28 +27,34 @@ export default function Column({ posts }) {
             ></Image>
           </a>
         </Link>
-      </div>
+      </motion.div>
 
       <h3>{AUTHOR}</h3>
 
       <p>
         {/* Socials */}
         {SOCIALS.map((social) => (
-          <a
+          <motion.span
             key={social.name}
-            href={social.url}
-            className="mx-2"
-            target="_blank"
-            rel="noopener noreferrer"
-            data-bs-toggle="tooltip"
-            title={social.name}
+            whileHover={{
+              scale: 1.1,
+              transition: { duration: 0.2 },
+              zIndex: 1,
+            }}
           >
-            <FontAwesomeIcon
-              icon={social.icon}
-              style={{ fontSize: "18pt" }}
-              className="text-light"
-            ></FontAwesomeIcon>
-          </a>
+            <a
+              href={social.url}
+              className="mx-2"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon
+                icon={social.icon}
+                style={{ fontSize: "18pt" }}
+                className="text-light"
+              ></FontAwesomeIcon>
+            </a>
+          </motion.span>
         ))}
       </p>
 
