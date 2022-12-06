@@ -40,10 +40,6 @@ $body-color: $xiketic;
 // Fonts
 // ##########################################
 
-$font-prefix: "/fonts/plex";
-@import "~@ibm/plex/scss/mono/index";
-@import "~@ibm/plex/scss/sans/index";
-@import "~@ibm/plex/scss/serif/index";
 @import "./fonts/mona.scss";
 @import "./fonts/hubot.scss";
 
