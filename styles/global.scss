@@ -44,11 +44,13 @@ $font-prefix: "/fonts/plex";
 @import "~@ibm/plex/scss/mono/index";
 @import "~@ibm/plex/scss/sans/index";
 @import "~@ibm/plex/scss/serif/index";
+@import "./fonts/mona.scss";
+@import "./fonts/hubot.scss";
 
 // Load garamond.
 @import "./fonts/garamond.scss";
 
-$font-family-sans-serif: "IBM Plex Sans", system-ui, sans-serif,
+$font-family-sans-serif: "Mona Sans", "IBM Plex Sans", system-ui, sans-serif,
   // Emoji fonts
   "Apple Color Emoji",
   "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
@@ -67,7 +69,7 @@ $font-family-serif:
 $font-family-base: $font-family-sans-serif;
 
 // Adjust font weight down.
-$font-weight-base: 400;
+$font-weight-base: 300;
 
 $line-height-base: 1.5;
 
@@ -90,36 +92,42 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $font-family-serif;
-  font-weight: $font-weight-base;
+  font-family: "Hubot Sans", $font-family-sans-serif;
+  font-weight: 600;
+  font-stretch: 80%;
 
   // Larger padding
   padding-bottom: 1.5rem;
 }
 
-// H1 headings get a short think underbar.
 h1 {
-  position: relative;
-}
-h1:after {
-  content: "";
-  position: absolute;
-  width: 8rem;
-  height: 5px;
-  bottom: 0.5rem;
-  left: 0;
-  border-bottom: 5px solid $xiketic;
-}
+  font-weight: 800;
+  font-size: $h1-font-size * 1.2;
 
-// Heading underlines: thick
-h1 > u {
-  text-decoration-thickness: 0.15em;
+  // H1 headings get a short think underbar.
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 8rem;
+    height: 5px;
+    bottom: 0.5rem;
+    left: 0;
+    border-bottom: 5px solid $xiketic;
+  }
+
+  // Heading underlines: thick
+  > u {
+    text-decoration-thickness: 0.15em;
+  }
 }
 
 // Subtitles: some top margin, sans serif
 .subtitle {
-  font-family: $font-family-sans-serif;
+  font-family: "Hubot Sans", $font-family-sans-serif;
   font-weight: $font-weight-base;
+  font-stretch: expanded;
   margin-top: 1rem;
 }
 
@@ -135,24 +143,27 @@ h1 > u {
 // ##########################################
 
 // Large spaces after content paragraphs.
-.content p,
-.content ul,
-.content ol {
-  margin-bottom: 2.5rem;
-}
+.content {
+  p,
+  ul,
+  ol,
+  pre {
+    margin-bottom: 2.5rem;
+  }
 
-// Full size images with soft drop shadow.
-.content img {
-  display: block;
+  // Full size images with soft drop shadow.
+  img {
+    display: block;
 
-  max-width: 80%;
-  margin: 0 auto;
+    max-width: 80%;
+    margin: 0 auto;
 
-  // Add a margin-bottom of 1.5rem to images.
-  margin-bottom: 1.5rem;
+    // Add a margin-bottom of 1.5rem to images.
+    margin-bottom: 1.5rem;
 
-  // Add soft drop shadow to images.
-  box-shadow: 1em 1em 3rem 0 rgb(0 0 0 / 20%);
+    // Add soft drop shadow to images.
+    box-shadow: 1em 1em 3rem 0 rgb(0 0 0 / 20%);
+  }
 }
 
 .no-shadow {

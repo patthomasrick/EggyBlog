@@ -40,7 +40,7 @@ export default function PostCard({ post, size }) {
 
         {post.excerpt && <p className="card-text">{post.excerpt}</p>}
 
-        <small className="text-muted">
+        <small className="text-muted subtitle">
           <Date dateString={post.date} />
         </small>
       </div>
