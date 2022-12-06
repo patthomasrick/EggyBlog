@@ -64,13 +64,15 @@ export default function Column({ posts }) {
 
       <h4>Recent Posts</h4>
 
-      {(posts ?? []).map((post) => (
-        <p key={post.id} className="mb-1">
-          <Link href={`/posts/${post.id}`}>
-            <a className="text-light">{post.title}</a>
-          </Link>
-        </p>
-      ))}
+      <ul className="text-left" style={{ textAlign: "left" }}>
+        {(posts ?? []).map((post) => (
+          <li key={post.id} className="mb-1">
+            <Link href={`/posts/${post.id}`}>
+              <a className="text-light">{post.title}</a>
+            </Link>
+          </li>
+        ))}
+      </ul>
 
       <p>
         <Link href={`/posts/pages/1`}>
