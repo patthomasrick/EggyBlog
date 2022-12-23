@@ -3,7 +3,7 @@ title: Homepage
 date: "2020-01-02"
 ---
 
-I’m Patrick, a software engineer. I will be starting as an associate solutions engineer at [C3.ai](https://c3.ai/) in January. I graduated from the [University of Virginia’s School of Engineering and Applied Sciences](https://engineering.virginia.edu/) in May of 2021 with bachelor's degrees in [Computer Science](https://engineering.virginia.edu/departments/computer-science) and [Computer Engineering](https://engineering.virginia.edu/departments/electrical-and-computer-engineering).
+I’m Patrick, a software engineer. I will be starting as an associate solutions engineer at [C3 AI](https://c3.ai/) in January. I graduated from the [University of Virginia’s School of Engineering and Applied Sciences](https://engineering.virginia.edu/) in May of 2021 with bachelor's degrees in [Computer Science](https://engineering.virginia.edu/departments/computer-science) and [Computer Engineering](https://engineering.virginia.edu/departments/electrical-and-computer-engineering).
 
 [<img src="/images/uva-engineering.svg" alt="UVA Engineering" class="no-shadow"></img>](https://engineering.virginia.edu/)
 
