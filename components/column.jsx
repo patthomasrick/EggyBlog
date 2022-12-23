@@ -1,9 +1,9 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Image from "next/image";
-import Link from "next/link";
-import { Container } from "react-bootstrap";
-import { AUTHOR, BIO, SOCIALS } from "./config";
-import { motion } from "framer-motion";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Image from 'next/image';
+import Link from 'next/link';
+import { Container } from 'react-bootstrap';
+import { AUTHOR, BIO, SOCIALS } from './config';
+import { motion } from 'framer-motion';
 
 export default function Column({ posts }) {
   return (
@@ -23,7 +23,7 @@ export default function Column({ posts }) {
               width={128}
               height={128}
               alt="Me"
-              style={{ borderRadius: "50%" }}
+              style={{ borderRadius: '50%' }}
             ></Image>
           </a>
         </Link>
@@ -50,7 +50,7 @@ export default function Column({ posts }) {
             >
               <FontAwesomeIcon
                 icon={social.icon}
-                style={{ fontSize: "18pt" }}
+                style={{ fontSize: '18pt' }}
                 className="text-light"
               ></FontAwesomeIcon>
             </a>
@@ -64,7 +64,7 @@ export default function Column({ posts }) {
 
       <h4>Recent Posts</h4>
 
-      <ul className="text-left" style={{ textAlign: "left" }}>
+      <ul className="text-left" style={{ textAlign: 'left' }}>
         {(posts ?? []).map((post) => (
           <li key={post.id} className="mb-1">
             <Link href={`/posts/${post.id}`}>

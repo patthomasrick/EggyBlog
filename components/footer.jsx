@@ -1,34 +1,34 @@
-import { useRouter } from "next/router";
-import { Container } from "react-bootstrap";
-import animals from "./animals";
+import { useRouter } from 'next/router';
+import { Container } from 'react-bootstrap';
+import animals from './animals';
 
 export default function Footer() {
   // Pick a random animal based on the current route.
   const router = useRouter();
   // Need to hash router.query.id to get a number between 0 and length of animals. Our hash is just the sum of the characters in the id.
-  const hash = (router.query.id ?? "")
-    .split("")
+  const hash = (router.query.id ?? '')
+    .split('')
     .reduce((acc, cur) => acc + cur.charCodeAt(0), 0);
   const Animal = animals[hash % animals.length];
 
   return (
-    <Container className="my-5 py-5 text-center" style={{ maxWidth: "48em" }}>
+    <Container className="my-5 py-5 text-center" style={{ maxWidth: '48em' }}>
       <div
         className="text-center mx-auto"
         style={{
-          position: "relative",
-          height: "256px",
-          width: "80%",
+          position: 'relative',
+          height: '256px',
+          width: '80%',
         }}
       >
         {Animal}
       </div>
       <br />
       <p>
-        Patrick Thomas, {new Date().getFullYear()}. Clip art images from{" "}
-        <a href="https://etc.usf.edu/clipart/">ClipArt ETC</a>. Built with{" "}
-        <a href="https://nextjs.org/">Next.js</a>. Powered by{" "}
-        <a href="https://vercel.com/">Vercel</a>. See the source code{" "}
+        Patrick Thomas, {new Date().getFullYear()}. Clip art images from{' '}
+        <a href="https://etc.usf.edu/clipart/">ClipArt ETC</a>. Built with{' '}
+        <a href="https://nextjs.org/">Next.js</a>. Powered by{' '}
+        <a href="https://vercel.com/">Vercel</a>. See the source code{' '}
         <a href="https://github.com/patthomasrick/EggyBlog">here</a>.
       </p>
     </Container>

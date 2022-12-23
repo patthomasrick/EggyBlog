@@ -1,18 +1,27 @@
 ---
-title: "Under new management"
-date: "2022-07-02"
-time: "21:44"
+title: 'Under new management'
+date: '2022-07-02'
+time: '21:44'
 tags:
-  - "project"
+  - 'project'
 image: /images/posts/grave.gif
 ---
 
-**TLDR: Old server died for unknown reasons.** If you are still interested in my personal projects, you can find them on my GitHub. Check the sidebar/footer for links.
+**TLDR: Old server died for unknown reasons.** If you are still interested in my
+personal projects, you can find them on my GitHub. Check the sidebar/footer for
+links.
 
-My personal web services used to be hosted on IONOS, which I still would still generally recommend for low-cost VPS hosting. IONOS does make it difficult to cancel hosting and requires you to call them to cancel.
+My personal web services used to be hosted on IONOS, which I still would still
+generally recommend for low-cost VPS hosting. IONOS does make it difficult to
+cancel hosting and requires you to call them to cancel.
 
-Unfortunately, my IONOS VPS silently passed away today, Saturday, July 2nd, 2022. The blog used to be a Ghost server, which I really like as a beautiful, modern alternative to WordPress for blogging.
+Unfortunately, my IONOS VPS silently passed away today, Saturday, July
+2nd, 2022. The blog used to be a Ghost server, which I really like as a
+beautiful, modern alternative to WordPress for blogging.
 
-Since I don't want my domain name to go to waste, I am now fast-tracking my new personal blog which I've been working on. This project is implemented in Next.js, a static site generator that I have been interested in for some time.
+Since I don't want my domain name to go to waste, I am now fast-tracking my new
+personal blog which I've been working on. This project is implemented in
+Next.js, a static site generator that I have been interested in for some time.
 
-I still have a lot of work to do on this website and hope to get my projects posted as well as actually finishing its implementation.
+I still have a lot of work to do on this website and hope to get my projects
+posted as well as actually finishing its implementation.

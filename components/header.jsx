@@ -1,15 +1,15 @@
-import Head from "next/head";
-import { SHORT_NAME } from "./config";
+import Head from 'next/head';
+import { SHORT_NAME } from './config';
 
 export default function Header({
   title,
-  description = "",
+  description = '',
   shortNameHidden = false,
 }) {
   if (shortNameHidden) {
-    var pageTitle = title ?? "Eggy Blog";
+    var pageTitle = title ?? 'Eggy Blog';
   } else {
-    var pageTitle = `${title ?? "Eggy Blog"} | ${SHORT_NAME}`;
+    var pageTitle = `${title ?? 'Eggy Blog'} | ${SHORT_NAME}`;
   }
 
   return (

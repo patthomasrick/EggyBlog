@@ -1,11 +1,11 @@
-import Link from "next/link";
-import Layout from "../../../components/layout";
-import PostCard from "../../../components/posts/post_card";
+import Link from 'next/link';
+import Layout from '../../../components/layout';
+import PostCard from '../../../components/posts/post_card';
 import {
   getAllPostIds,
   getLayoutPostData,
   getSortedPostsData,
-} from "../../../utils/posts";
+} from '../../../utils/posts';
 
 export async function getStaticPaths() {
   const postIDs = getAllPostIds();
@@ -28,8 +28,8 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   const layoutData = getLayoutPostData();
   const crumbs = [
-    { label: "Home", url: "/" },
-    { label: "Posts", url: "/posts" },
+    { label: 'Home', url: '/' },
+    { label: 'Posts', url: '/posts' },
     { label: `Page ${params.page}`, url: `/posts/pages/${params.page}` },
   ];
   const page = Number(params.page);

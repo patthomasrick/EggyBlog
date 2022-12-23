@@ -1,11 +1,11 @@
-import { NAME, SUBTITLE } from "../components/config";
-import Layout from "../components/layout";
-import PostCard from "../components/posts/post_card";
-import { getLayoutPostData, getPageData } from "../utils/posts";
+import { NAME, SUBTITLE } from '../components/config';
+import Layout from '../components/layout';
+import PostCard from '../components/posts/post_card';
+import { getLayoutPostData, getPageData } from '../utils/posts';
 
 export async function getStaticProps() {
   const layoutData = getLayoutPostData();
-  const homePageData = await getPageData("home");
+  const homePageData = await getPageData('home');
   const recentPosts = layoutData.column.slice(0, 5);
 
   return {

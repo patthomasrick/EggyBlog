@@ -1,10 +1,10 @@
-import { format, parseISO } from "date-fns";
-import Layout from "../../components/layout";
+import { format, parseISO } from 'date-fns';
+import Layout from '../../components/layout';
 import {
   getAllPostIds,
   getLayoutPostData,
   getPostData,
-} from "../../utils/posts";
+} from '../../utils/posts';
 
 export async function getStaticPaths() {
   const paths = getAllPostIds();
@@ -18,8 +18,8 @@ export async function getStaticProps({ params }) {
   const layoutData = getLayoutPostData();
   const postData = await getPostData(params.id);
   const crumbs = [
-    { label: "Home", url: "/" },
-    { label: "Posts", url: "/posts/pages/1" },
+    { label: 'Home', url: '/' },
+    { label: 'Posts', url: '/posts/pages/1' },
     { label: postData.title, url: `/posts/${params.id}`, active: true },
   ];
   return {
@@ -36,7 +36,7 @@ export default function Post({ postData, crumbs, layoutData }) {
     <Layout
       title={postData.title}
       description={postData.excerpt}
-      subtitle={format(parseISO(postData.date), "d MMM yyyy")}
+      subtitle={format(parseISO(postData.date), 'd MMM yyyy')}
       crumbs={crumbs}
       layoutData={layoutData}
     >

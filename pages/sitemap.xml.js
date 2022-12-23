@@ -1,7 +1,7 @@
 //pages/sitemap.xml.js
-import { getAllPostIds } from "../utils/posts";
+import { getAllPostIds } from '../utils/posts';
 
-const SITE_URL = "https://patrickwthomas.net";
+const SITE_URL = 'https://patrickwthomas.net';
 
 function generateSiteMap(posts) {
   return `<?xml version="1.0" encoding="UTF-8"?>
@@ -17,7 +17,7 @@ function generateSiteMap(posts) {
        </url>
      `;
        })
-       .join("")}
+       .join('')}
    </urlset>
  `;
 }
@@ -33,7 +33,7 @@ export async function getServerSideProps({ res }) {
   // We generate the XML sitemap with the posts data
   const sitemap = generateSiteMap(posts);
 
-  res.setHeader("Content-Type", "text/xml");
+  res.setHeader('Content-Type', 'text/xml');
   // we send the XML to the browser
   res.write(sitemap);
   res.end();

@@ -1,14 +1,14 @@
-import fs from "fs";
-import matter from "gray-matter";
-import path from "path";
-import { unified } from "unified";
-import remarkParse from "remark-parse";
-import remarkRehype from "remark-rehype";
-import rehypeRaw from "rehype-raw";
-import rehypeStringify from "rehype-stringify";
+import fs from 'fs';
+import matter from 'gray-matter';
+import path from 'path';
+import { unified } from 'unified';
+import remarkParse from 'remark-parse';
+import remarkRehype from 'remark-rehype';
+import rehypeRaw from 'rehype-raw';
+import rehypeStringify from 'rehype-stringify';
 
-const posts_directory = path.join(process.cwd(), "posts", "posts");
-const pages_directory = path.join(process.cwd(), "posts", "pages");
+const posts_directory = path.join(process.cwd(), 'posts', 'posts');
+const pages_directory = path.join(process.cwd(), 'posts', 'pages');
 
 /**
  * Compare two dates.
@@ -41,7 +41,7 @@ function getPostsFromDir(
   directory,
   start = 0,
   end = 10,
-  prefix = "",
+  prefix = '',
   sort = dateCmp
 ) {
   // Get file names under /posts
@@ -53,11 +53,11 @@ function getPostsFromDir(
     })
     .map((file_name) => {
       // Remove ".md" from file name to get id
-      const id = file_name.replace(/\.md$/, "");
+      const id = file_name.replace(/\.md$/, '');
 
       // Read markdown file as string
       const full_path = path.join(directory, file_name);
-      const file_contents = fs.readFileSync(full_path, "utf8");
+      const file_contents = fs.readFileSync(full_path, 'utf8');
 
       // Use gray-matter to parse the post metadata section
       const matter_result = matter(file_contents);
@@ -88,7 +88,7 @@ function getPostsFromDir(
  */
 async function getMarkdownData(directory, id) {
   const full_path = path.join(directory, `${id}.md`);
-  const file_contents = fs.readFileSync(full_path, "utf8");
+  const file_contents = fs.readFileSync(full_path, 'utf8');
 
   // Use gray-matter to parse the post metadata section
   const matter_result = matter(file_contents);
@@ -132,7 +132,7 @@ export function getAllPostIds() {
   return file_names.map((file_name) => {
     return {
       params: {
-        id: file_name.replace(/\.md$/, ""),
+        id: file_name.replace(/\.md$/, ''),
       },
     };
   });
