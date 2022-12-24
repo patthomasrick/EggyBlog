@@ -1,16 +1,16 @@
-import { motion } from "framer-motion";
-import { useRouter } from "next/router";
-import { Container } from "react-bootstrap";
-import Breadcrumbs from "./breadcrumbs";
-import Column from "./column";
-import Footer from "./footer";
-import Header from "./header";
-import LayoutNavbar from "./navbar";
+import { motion } from 'framer-motion';
+import { useRouter } from 'next/router';
+import { Container } from 'react-bootstrap';
+import Breadcrumbs from './breadcrumbs';
+import Column from './column';
+import Footer from './footer';
+import Header from './header';
+import LayoutNavbar from './navbar';
 
 export default function Layout({
-  title = "Untitled",
-  description = "",
-  subtitle = "",
+  title = 'Untitled',
+  description = '',
+  subtitle = '',
   crumbs = [],
   layoutData,
   children,
@@ -32,7 +32,7 @@ export default function Layout({
           {/* Navbar */}
           <LayoutNavbar />
 
-          <div className="container" style={{ maxWidth: "48em" }}>
+          <div className="container" style={{ maxWidth: '48em' }}>
             {/* Breadcrumbs */}
             <Container>
               <Breadcrumbs crumbs={crumbs} />

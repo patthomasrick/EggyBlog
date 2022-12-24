@@ -1,5 +1,5 @@
-import Link from "next/link";
-import { Breadcrumb } from "react-bootstrap";
+import Link from 'next/link';
+import { Breadcrumb } from 'react-bootstrap';
 
 export default function Breadcrumbs({ crumbs }) {
   // Set last crumb as active
@@ -11,7 +11,7 @@ export default function Breadcrumbs({ crumbs }) {
         {(crumbs ?? []).map((crumb, index) => (
           <li
             key={index}
-            className={`breadcrumb-item ${crumb.active ? "active" : ""}`}
+            className={`breadcrumb-item ${crumb.active ? 'active' : ''}`}
           >
             <Link href={crumb.url}>{crumb.label}</Link>
           </li>

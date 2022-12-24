@@ -40,26 +40,26 @@ $body-color: $xiketic;
 // Fonts
 // ##########################################
 
-@import "./fonts/mona.scss";
-@import "./fonts/hubot.scss";
+@import './fonts/mona.scss';
+@import './fonts/hubot.scss';
 
 // Load garamond.
-@import "./fonts/garamond.scss";
+@import './fonts/garamond.scss';
 
-$font-family-sans-serif: "Mona Sans", "IBM Plex Sans", system-ui, sans-serif,
+$font-family-sans-serif: 'Mona Sans', 'IBM Plex Sans', system-ui, sans-serif,
   // Emoji fonts
-  "Apple Color Emoji",
-  "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+  'Apple Color Emoji',
+  'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji' !default;
 
 $font-family-serif: 
   // Custom
-  "EB Garamond", "IBM Plex Serif",
+  'EB Garamond', 'IBM Plex Serif',
   // Widely-available serif fonts
-  "Georgia",
-  Times, serif, "Apple Color Emoji",
+  'Georgia',
+  Times, serif, 'Apple Color Emoji',
   // Emoji fonts
-  "Segoe UI Emoji",
-  "Segoe UI Symbol", "Noto Color Emoji" !default;
+  'Segoe UI Emoji',
+  'Segoe UI Symbol', 'Noto Color Emoji' !default;
 
 // Set the default font family to IBM Plex Sans
 $font-family-base: $font-family-sans-serif;
@@ -72,7 +72,7 @@ $line-height-base: 1.5;
 $font-size-root: 18px;
 
 /* import bootstrap to set changes */
-@import "~bootstrap/scss/bootstrap";
+@import '~bootstrap/scss/bootstrap';
 
 // ##########################################
 // Theme modifications
@@ -88,7 +88,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Hubot Sans", $font-family-sans-serif;
+  font-family: 'Hubot Sans', $font-family-sans-serif;
   font-weight: 600;
   font-stretch: 80%;
 
@@ -104,7 +104,7 @@ h1 {
   position: relative;
 
   &:after {
-    content: "";
+    content: '';
     position: absolute;
     width: 8rem;
     height: 5px;
@@ -121,7 +121,7 @@ h1 {
 
 // Subtitles: some top margin, sans serif
 .subtitle {
-  font-family: "Hubot Sans", $font-family-sans-serif;
+  font-family: 'Hubot Sans', $font-family-sans-serif;
   font-weight: $font-weight-base;
   font-stretch: expanded;
   margin-top: 1rem;

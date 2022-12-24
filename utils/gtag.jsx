@@ -1,6 +1,6 @@
 // See https://github.com/vercel/next.js/blob/canary/examples/with-google-analytics/lib/gtag.js
 
-import getConfig from "next/config";
+import getConfig from 'next/config';
 
 export const GA4_ID = process.env.GA4_MEASUREMENT_ID;
 
@@ -25,12 +25,12 @@ export function clientGA4MeasurementID() {
  * @param {string} url
  */
 export function onPageView(url) {
-  if (process.env.NODE_ENV === "development") {
-    console.log("GA4 page view:", url);
+  if (process.env.NODE_ENV === 'development') {
+    console.log('GA4 page view:', url);
   }
   const GA4_ID = clientGA4MeasurementID();
   if (GA4_ID && window.gtag) {
-    window.gtag("config", GA4_ID, {
+    window.gtag('config', GA4_ID, {
       page_path: url,
     });
   }
@@ -45,12 +45,12 @@ export function onPageView(url) {
  * @param {*} { action, category, label, value }
  */
 export function event({ action, category, label, value }) {
-  if (process.env.NODE_ENV === "development") {
-    console.log("GA4 event fired:", action, category, label, value);
+  if (process.env.NODE_ENV === 'development') {
+    console.log('GA4 event fired:', action, category, label, value);
   }
   const GA4_ID = clientGA4MeasurementID();
   if (GA4_ID && window.gtag) {
-    window.gtag("event", action, {
+    window.gtag('event', action, {
       event_category: category,
       event_label: label,
       value: value,

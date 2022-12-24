@@ -1,6 +1,6 @@
-import { motion } from "framer-motion";
-import Link from "next/link";
-import Date from "../date";
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import Date from '../date';
 
 export default function PostCard({ post, size }) {
   return (
@@ -18,7 +18,7 @@ export default function PostCard({ post, size }) {
           className="ratio ratio-4x3 card-img-top"
           style={{
             backgroundImage: `url(${post.image})`,
-            backgroundSize: "cover",
+            backgroundSize: 'cover',
           }}
         ></div>
       )}
@@ -32,7 +32,7 @@ export default function PostCard({ post, size }) {
           ))}
         </div>
 
-        <h3 className={`card-title py-0 ${size == "large" ? "h5" : "h6"}`}>
+        <h3 className={`card-title py-0 ${size == 'large' ? 'h5' : 'h6'}`}>
           <Link href={`/posts/${post.id}`}>
             <a className="text-light stretched-link">{post.title}</a>
           </Link>
